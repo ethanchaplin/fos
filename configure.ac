@@ -971,38 +971,6 @@ AM_CONDITIONAL([FOUND_GCOVR], [test "x$gcovr" = xyes])
 
 # Output
 #####################################################
-# Hack alert!
-# Python modules can't be split over two directories. This is a problem when
-# doing VPATH builds since the generated files like
-# ${builddir}/python/ola/Ola_pb.py will be in a separate path ( $builddir ) from
-# the non-generated files $srcdir/python/ols/PidStore.py). To get the tests
-# to pass we symlink the files we need for the tests from the builddir to the
-# srcdir and set PYTHONPATH=${top_builddir}/python in data/rdm/Makefile.am
-AC_CONFIG_LINKS([python/ola/__init__.py:python/ola/__init__.py
-                 python/ola/ClientWrapper.py:python/ola/ClientWrapper.py
-                 python/ola/DMXConstants.py:python/ola/DMXConstants.py
-                 python/ola/DUBDecoder.py:python/ola/DUBDecoder.py
-                 python/ola/MACAddress.py:python/ola/MACAddress.py
-                 python/ola/OlaClient.py:python/ola/OlaClient.py
-                 python/ola/PidStore.py:python/ola/PidStore.py
-                 python/ola/RDMAPI.py:python/ola/RDMAPI.py
-                 python/ola/RDMConstants.py:python/ola/RDMConstants.py
-                 python/ola/StringUtils.py:python/ola/StringUtils.py
-                 python/ola/TestUtils.py:python/ola/TestUtils.py
-                 python/ola/UID.py:python/ola/UID.py
-                 python/ola/rpc/__init__.py:python/ola/rpc/__init__.py
-                 python/ola/rpc/SimpleRpcController.py:python/ola/rpc/SimpleRpcController.py
-                 python/ola/rpc/StreamRpcChannel.py:python/ola/rpc/StreamRpcChannel.py
-                 tools/rdm/__init__.py:tools/rdm/__init__.py
-                 tools/rdm/ExpectedResults.py:tools/rdm/ExpectedResults.py
-                 tools/rdm/ResponderTest.py:tools/rdm/ResponderTest.py
-                 tools/rdm/TestCategory.py:tools/rdm/TestCategory.py
-                 tools/rdm/TestDefinitions.py:tools/rdm/TestDefinitions.py
-                 tools/rdm/TestHelpers.py:tools/rdm/TestHelpers.py
-                 tools/rdm/TestMixins.py:tools/rdm/TestMixins.py
-                 tools/rdm/TestRunner.py:tools/rdm/TestRunner.py
-                 tools/rdm/TestState.py:tools/rdm/TestState.py
-                 tools/rdm/TimingStats.py:tools/rdm/TimingStats.py])
 
 # Non-makefile generated files.
 AC_CONFIG_FILES([include/ola/base/Version.h
@@ -1013,11 +981,9 @@ AC_CONFIG_FILES([include/ola/base/Version.h
                  plugins/artnet/messages/libolaartnetconf.pc
                  plugins/e131/messages/libolae131conf.pc
                  plugins/usbpro/messages/libolausbproconf.pc
-                 tools/e133/libolae133common.pc
-                 tools/e133/libolae133controller.pc
                  ])
 # Makefiles
-AC_CONFIG_FILES([Makefile java/Makefile])
+AC_CONFIG_FILES([Makefile])
 AC_SUBST(AM_LDFLAGS)
 AC_OUTPUT
 

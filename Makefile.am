@@ -150,9 +150,6 @@ built_sources =
 # Test scripts are run if BUILD_TESTS is true.
 test_scripts =
 
-# directories with python code that should be test compiled during the build
-PYTHON_BUILD_DIRS =
-
 # The includes
 # -----------------------------------------------------------------------------
 
@@ -160,12 +157,7 @@ PYTHON_BUILD_DIRS =
 # which libraries depend on each other. e.g. common, plugin_api, plugins, server.
 include common/Makefile.mk
 include data/Makefile.mk
-include debian/Makefile.mk
-include doxygen/Makefile.mk
-include examples/Makefile.mk
 include include/Makefile.mk
-include javascript/Makefile.mk
-include man/Makefile.mk
 include libs/Makefile.mk
 include ola/Makefile.mk
 # olad/plugin_api/Makefile.mk is included directly due to the order of
@@ -175,9 +167,7 @@ include olad/plugin_api/Makefile.mk
 include plugins/Makefile.mk
 include olad/Makefile.mk
 include protoc/Makefile.mk
-include python/Makefile.mk
 include scripts/Makefile.mk
-include tools/Makefile.mk
 
 # -----------------------------------------------------------------------------
 
@@ -198,10 +188,6 @@ install-exec-hook: $(INSTALL_EXEC_HOOKS)
 # the build, so they are present for Doxygen to run against
 builtfiles : Makefile.am $(built_sources)
 .PHONY : builtfiles
-
-# I can't figure out how to safely execute a command (mvn) in a subdirectory,
-# so this is recursive for now.
-SUBDIRS = java
 
 pkgconfig_DATA += libola.pc libolaserver.pc
 

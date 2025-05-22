@@ -15,7 +15,7 @@ if [ ! -d $dest_dir ]; then
   exit;
 fi
 
-./configure --disable-dependency-tracking --enable-python-libs --disable-slp
+./configure --disable-dependency-tracking --disable-slp
 make  CPPFLAGS="-arch ppc -arch i386 -arch x86_64 -mmacosx-version-min=10.5"  \
   LDFLAGS=" -arch ppc -arch i386 -arch x86_64 -mmacosx-version-min=10.5"
 make check
