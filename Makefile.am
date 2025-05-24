@@ -159,7 +159,6 @@ include common/Makefile.mk
 include data/Makefile.mk
 include include/Makefile.mk
 include libs/Makefile.mk
-include ola/Makefile.mk
 # olad/plugin_api/Makefile.mk is included directly due to the order of
 # dependencies between them; we need to build olad/plugin_api, then the
 # plugins, then olad
@@ -167,7 +166,6 @@ include olad/plugin_api/Makefile.mk
 include plugins/Makefile.mk
 include olad/Makefile.mk
 include protoc/Makefile.mk
-include scripts/Makefile.mk
 
 # -----------------------------------------------------------------------------
 
@@ -189,7 +187,7 @@ install-exec-hook: $(INSTALL_EXEC_HOOKS)
 builtfiles : Makefile.am $(built_sources)
 .PHONY : builtfiles
 
-pkgconfig_DATA += libola.pc libolaserver.pc
+pkgconfig_DATA += libolaserver.pc
 
 # dvi is run from make distcheck. Do nothing.
 dvi:

@@ -4,7 +4,6 @@
 AC_PREREQ(2.57)
 m4_include([config/ola_version.m4])
 AC_INIT([OLA], [ola_version], [open-lighting@googlegroups.com])
-AC_CONFIG_SRCDIR([libola.pc.in])
 AC_CONFIG_AUX_DIR([config])
 AC_SUBST([ac_aux_dir])
 AC_CONFIG_HEADERS([config.h])
@@ -974,7 +973,6 @@ AM_CONDITIONAL([FOUND_GCOVR], [test "x$gcovr" = xyes])
 
 # Non-makefile generated files.
 AC_CONFIG_FILES([include/ola/base/Version.h
-                 libola.pc
                  libolaserver.pc
                  libs/acn/libolaacn.pc
                  ola.spec

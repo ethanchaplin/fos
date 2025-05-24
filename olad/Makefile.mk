@@ -53,7 +53,6 @@ olad_libolaserver_la_CXXFLAGS = $(COMMON_PROTOBUF_CXXFLAGS) \
 olad_libolaserver_la_LIBADD = $(PLUGIN_LIBS) \
                               common/libolacommon.la \
                               common/web/libolaweb.la \
-                              ola/libola.la \
                               olad/plugin_api/libolaserverplugininterface.la \
                               $(ola_server_additional_libs)
 # Simon: I'm not too sure about this but it seems that because PLUGIN_LIBS is
@@ -69,8 +68,7 @@ if SUPPORTS_RDYNAMIC
 olad_olad_LDFLAGS = -rdynamic
 endif
 olad_olad_LDADD = olad/libolaserver.la \
-                  common/libolacommon.la \
-                  ola/libola.la
+                  common/libolacommon.la
 
 # TESTS
 ##################################################

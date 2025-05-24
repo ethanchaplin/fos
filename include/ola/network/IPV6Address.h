@@ -28,7 +28,6 @@
 
 #ifndef INCLUDE_OLA_NETWORK_IPV6ADDRESS_H_
 #define INCLUDE_OLA_NETWORK_IPV6ADDRESS_H_
-
 #include <sys/socket.h>  // Required by FreeBSD
 #include <netinet/in.h>  // Required by FreeBSD
 #include <stdint.h>

@@ -36,8 +36,8 @@ namespace artnet {
 
 using std::string;
 
-const char ArtNetPlugin::ARTNET_LONG_NAME[] = "OLA - ArtNet node";
-const char ArtNetPlugin::ARTNET_SHORT_NAME[] = "OLA - ArtNet node";
+const char ArtNetPlugin::ARTNET_LONG_NAME[] = "Photon - Art-Net Node";
+const char ArtNetPlugin::ARTNET_SHORT_NAME[] = "Photon - Art-Net Node";
 const char ArtNetPlugin::PLUGIN_NAME[] = "ArtNet";
 const char ArtNetPlugin::PLUGIN_PREFIX[] = "artnet";
 

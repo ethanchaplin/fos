@@ -32,8 +32,7 @@ olad_plugin_api_libolaserverplugininterface_la_CXXFLAGS = \
     $(COMMON_PROTOBUF_CXXFLAGS)
 olad_plugin_api_libolaserverplugininterface_la_LIBADD = \
     common/libolacommon.la \
-    common/web/libolaweb.la \
-    ola/libola.la
+    common/web/libolaweb.la
 
 # TESTS
 ##################################################

@@ -70,7 +70,7 @@ static const int OLA_DEFAULT_PORT = 9010;
 /**
  * @brief The default instance name for olad.
  */
-static const char OLA_DEFAULT_INSTANCE_NAME[] = "OLA Server";
+static const char OLA_DEFAULT_INSTANCE_NAME[] = "FOS Server";
 
 /**
  * @brief The ESTA manufacturer code for the Open Lighting Project.
